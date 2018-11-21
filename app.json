@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "Ondetempico",
+    "description": "A very interesting project.",
+    "slug": "Ondetempico",
+    "privacy": "public",
+    "sdkVersion": "31.0.0",
+    "platforms": ["ios", "android"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/images/icon.png",
+    "facebookAppId": "748901458621446",
+    "facebookDisplayName": "Ondetempico",
+    "facebookScheme": "fb748901458621446",
+    "packagerOpts": {
+      "sourceExts": ["ts", "tsx"],
+      "transformer": "node_modules/react-native-typescript-transformer/index.js"
+    },
+    "splash": {
+      "image": "./src/assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ondetempico.app"
+    },
+    "android": {
+      "package": "com.ondetempico.app"
+    }
+  }
+}

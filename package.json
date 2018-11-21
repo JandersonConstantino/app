@@ -1,0 +1,43 @@
+{
+  "name": "ondetempico",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject",
+    "test": "node ./node_modules/jest/bin/jest.js --watchAll"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "@expo/samples": "2.1.1",
+    "expo": "^31.0.2",
+    "firebase": "^5.5.8",
+    "react": "16.5.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
+    "react-native-maps": "^0.22.1",
+    "react-native-fbsdk": "^0.8.0",
+    "react-navigation": "^2.18.2",
+    "react-redux": "^5.1.1",
+    "redux": "^4.0.1",
+    "redux-persist": "^5.10.0",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/expo": "^30.0.0",
+    "@types/expo__vector-icons": "^6.2.3",
+    "@types/react": "^16.7.4",
+    "@types/react-native": "^0.57.8",
+    "@types/react-navigation": "^2.13.2",
+    "@types/styled-components": "^4.1.0",
+    "babel-preset-expo": "^5.0.0",
+    "jest-expo": "^31.0.0",
+    "react-native-typescript-transformer": "^1.2.10",
+    "tslib": "^1.9.3",
+    "typescript": "^3.1.6"
+  }
+}
