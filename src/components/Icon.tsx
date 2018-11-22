@@ -1,6 +1,4 @@
 import * as React from 'react'
-
-import { theme, Color } from '../constants/Theme'
 import { Svg } from 'expo'
 
 type Props = {

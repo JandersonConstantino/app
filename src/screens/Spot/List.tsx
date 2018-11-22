@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { styled } from '../../constants/Theme'
-import { View, Text } from 'react-native'
 import LocationContainer from '../../containers/LocationContainer'
 
 const Container = styled.View`
