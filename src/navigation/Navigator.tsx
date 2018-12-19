@@ -57,7 +57,7 @@ export const Navigator = createDrawerNavigator(
     Login
   },
   {
-    initialRouteName: 'List',
+    initialRouteName: 'New',
     contentComponent: Navigation
   }
 )

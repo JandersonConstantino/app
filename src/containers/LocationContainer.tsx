@@ -6,6 +6,16 @@ import { fetchCoordinates } from '../actions/coordinates'
 import { Coordinate } from '../reducers/coordinates'
 import { StyleSheet } from 'react-native'
 
+const style = StyleSheet.create({
+  map: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    height: '100%'
+  }
+})
+
 interface State {
   coordinates: Coordinate
 }
@@ -42,19 +52,9 @@ class LocationContainer extends React.Component<Props, State> {
     }
 
     return (
-      <MapView style={StyleSheet.absoluteFillObject} region={coordinates}>
+      <MapView style={style.map} region={coordinates}>
         {this.props.children}
       </MapView>
-      // <Map
-      //   zoom={zoom}
-      //   style={{ height: 'calc(100vh - 50px)' }}
-      //   onViewportChanged={this.recordCenter}
-      //   center={{ lat: latitude, lng: longitude }}
-      // >
-      //   <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-
-      //   {this.props.children}
-      // </Map>
     )
   }
 }
