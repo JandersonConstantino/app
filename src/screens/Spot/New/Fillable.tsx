@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { TextInput } from 'react-native'
 
+import { TextInput } from '../../../components/TextInput'
 import { Subtitle } from '../shared/Subtitle'
 import { Wrapper } from '../shared/Wrapper'
 import { Title } from '../shared/Title'
@@ -8,7 +8,7 @@ import { Button } from '../../../components/Button'
 import { styled } from '../../../constants/Theme'
 import { Checkbox } from '../../../components/Checkbox'
 
-const ConfirmButton = styled(Button)``
+const Submit = styled(Button)``
 
 const modalities = [
   {
@@ -47,7 +47,7 @@ export class Fillable extends React.Component {
         {/* <Radio id="paid" name="cost" text="O acesso é pago" /> */}
         {/* <Radio id="free" name="cost" text="O acesso é gratuito" defaultChecked /> */}
 
-        <ConfirmButton color="primary" size="large" text="Salvar esse local" />
+        <Submit color="primary" size="large" text="Salvar esse local" />
       </Wrapper>
     )
   }
