@@ -6,25 +6,38 @@ import { Wrapper } from '../shared/Wrapper'
 import { Title } from '../shared/Title'
 import { Button } from '../../../components/Button'
 import { styled } from '../../../constants/Theme'
-import { Checkbox } from '../../../components/Checkbox'
+import { Checkbox, Option } from '../../../components/Checkbox'
 
 const Submit = styled(Button)``
 
-const modalities = [
+const modalities: Option[] = [
   {
     label: 'Street',
-    value: 'street',
-    selected: false
+    key: 'street',
+    checked: false
   },
   {
     label: 'Longboard',
-    value: 'longboard',
-    selected: false
+    key: 'longboard',
+    checked: false
   }
 ]
 
 export class Fillable extends React.Component {
-  whenModalitiesSelected = () => {}
+  state = {
+    options: [
+      {
+        key: 'street',
+        text: 'Street',
+        checked: false
+      },
+      {
+        key: 'longboard',
+        text: 'Longboard',
+        checked: false
+      }
+    ]
+  }
 
   render() {
     return (
@@ -37,10 +50,7 @@ export class Fillable extends React.Component {
           Esse pico é sugerido pra qual modalidade? Selecione as categorias.
         </Subtitle>
 
-        <Checkbox onChange={this.whenModalitiesSelected} options={modalities} />
-
-        {/* <Checkbox id="street" text="Street" /> */}
-        {/* <Checkbox id="longboard" text="Longboard" /> */}
+        <Checkbox options={modalities} />
 
         <Subtitle>É necessário pagar pra andar aí?, Marque uma opção.</Subtitle>
 

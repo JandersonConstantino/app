@@ -24,7 +24,7 @@ const map = {
 }
 
 const ButtonWrapper = styled.TouchableOpacity`
-  border-radius: 50;
+  border-radius: 4px;
   background-color: ${props =>
     props.theme.combinations[props.color].background};
 
@@ -33,8 +33,7 @@ const ButtonWrapper = styled.TouchableOpacity`
 
 const ButtonText = styled.Text`
   font-family: 'roboto-regular';
-  font-size: 12;
-  letter-spacing: 1;
+  font-size: 11;
   text-align: center;
   color: ${props => props.theme.combinations[props.color].color};
 `
