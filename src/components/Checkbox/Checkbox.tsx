@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react'
+import React from 'react'
+import { Text, TouchableOpacity } from 'react-native'
 
 export type Option = {
   checked: boolean
@@ -36,14 +37,14 @@ export class Checkbox extends React.Component<Props, State> {
     const { checkboxes } = this.state
 
     return (
-      <Fragment>
+      <>
         {checkboxes.map(({ key, label, checked }) => (
-          <div onClick={() => this.setChecked(key)} key={key}>
-            <span>{checked ? '[X]' : '[ ]'}</span>
-            <p>{label}</p>
-          </div>
+          <TouchableOpacity onPress={() => this.setChecked(key)} key={key}>
+            <Text>{checked ? '[X]' : '[ ]'}</Text>
+            <Text>{label}</Text>
+          </TouchableOpacity>
         ))}
-      </Fragment>
+      </>
     )
   }
 }
