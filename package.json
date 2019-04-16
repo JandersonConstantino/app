@@ -13,9 +13,29 @@
   "jest": {
     "preset": "jest-expo",
     "transform": {
-      "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    }
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.jest.json"
+      }
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "modulePaths": [
+      "<rootDir>"
+    ],
+    "setupFiles": [
+      "./src/jestSetup.js"
+    ]
   },
   "dependencies": {
     "@expo/samples": "2.1.1",
@@ -35,6 +55,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@types/enzyme": "^3.9.1",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/expo": "^30.0.0",
     "@types/expo__vector-icons": "^6.2.3",
     "@types/jest": "^24.0.11",
@@ -44,9 +66,13 @@
     "@types/styled-components": "^4.1.0",
     "babel-jest": "^24.5.0",
     "babel-preset-expo": "^5.0.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
     "jest": "^24.5.0",
     "jest-expo": "^31.0.0",
-    "ts-jest": "^24.0.0",
+    "jest-fetch-mock": "^2.1.2",
+    "react-dom": "^16.8.6",
+    "ts-jest": "^24.0.2",
     "tslib": "^1.9.3",
     "typescript": "^3.1.6"
   }
